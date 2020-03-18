@@ -1,0 +1,31 @@
+@charset 'UTF-8';
+
+.slick-prev,
+.slick-next
+{
+    line-height: 0;
+    position: absolute;
+    bottom: -20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    color: #333;
+    border: 1px solid gray;
+    border-radius: 3px;
+    outline: none;
+    background: #fff;  
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-prev
+{
+    right:50px;
+}
+.slick-next
+{
+    right: 10px;
+}
+
