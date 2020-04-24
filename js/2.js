@@ -17,9 +17,7 @@ function scroll_menu()
 		if(document.body.scrollTop > 400 || document.documentElement.scrollTop > 400)
 		{
 			  nav_header.classList.add("new_menu");
-			 
-			 sticky.style.display = "block";			
-			  
+			  sticky.style.display = "block";			
 		}
 		else
 		{
@@ -34,8 +32,6 @@ function scroll_menu()
 	sticky.addEventListener("click",()=>{
 		nav_header.classList.toggle("active1");
 	});
-
-
 
 
 // Hieu Ung Khi mousemove 
@@ -143,3 +139,11 @@ const render = (element,str)=>{
 	element.innerHTML = str;
 }
 
+
+const group_icon = document.querySelector(".group-icon");
+
+const toggle_icon = document.querySelector(".toggle-icon");
+
+toggle_icon.addEventListener("click",()=>{
+	group_icon.classList.toggle("toggle");
+})
