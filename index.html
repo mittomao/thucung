@@ -35,8 +35,8 @@
                             <span><i class="fa fa-align-justify"></i></span>
                         </button>
                     </div>
-                    <div class="collapse navbar-collapse" id="collapsibleNavId">
-                        <ul class="navbar-nav mr-auto  mt-lg-0">
+                    <div class="collapse navbar-collapse " id="collapsibleNavId">
+                        <ul class="navbar-nav mt-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Home</a>
                             </li>
@@ -161,6 +161,7 @@
                               <option>Desc</option>
                             </select>
                           </div>
+                          
                           <div class="alert alert-success alert-dismissible mx-auto" id ="tag">
                             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                           </div>
@@ -739,7 +740,43 @@
             autoplay: true,
             autoplaySpeed: 1000,
         });
+        const slickPrev = document.querySelector(".slick-prev");
+slickPrev.innerHTML = `<i class = "fa fa-angle-double-left"></i>`;
+const slickNext = document.querySelector(".slick-next");
+slickNext.innerHTML = `<i class = "fa fa-angle-double-right"></i>`;
        
+    </script>
+
+    <script>
+    
+        const arr = [1,[2,3,[4, [5,6]]]];
+
+        //output [1,2,3,4,5,6]
+        function flater(arr){
+            let arr_new = [];
+            for(let i = 0; i<arr.length ; i++){
+                if(Array.isArray(arr[i])){
+                    arr_new = arr_new.concat(flater(arr[i]));
+                }
+                else{
+                    arr_new = arr_new.concat(arr[i]);
+                }
+            }
+            return arr_new;
+        }
+        console.log(flater(arr));
+
+        const arr1 = ["a","b","a","c","d","a"];
+
+        function filterItem(arr){
+            let obj = {};
+            for (let i = 0; i < arr.length; i++) {
+                const element = arr[i];
+                obj[arr[i]] = (obj[arr[i]]||0) + 1;
+            }
+            return obj;
+        }
+        console.log(filterItem(arr1))
     </script>
   </body>
 </html>

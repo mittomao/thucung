@@ -1,8 +1,8 @@
 var body = document.querySelector("body");
 var sticky = document.createElement("span");
-var close = document.createElement("span");
-sticky.className = "justify";
+var close = document.createElement("i");
 
+sticky.className = "fa fa-align-justify icon-nav";
 
 
  window.onscroll = function(){scroll_menu()}			
@@ -147,3 +147,8 @@ const toggle_icon = document.querySelector(".toggle-icon");
 toggle_icon.addEventListener("click",()=>{
 	group_icon.classList.toggle("toggle");
 })
+
+
+// Nut Slick_preb
+
+
